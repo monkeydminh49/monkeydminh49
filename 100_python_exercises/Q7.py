@@ -17,10 +17,24 @@ y = ls[1]
 a = []
 r = []
 
-for j in range(0, x):          #row
-    for i in range(0, y):      #column
+for j in range(x):          #row
+    for i in range(y):      #column
         r.append(j*i)
         if i == y-1:
             a.append(r[:])
             r = []
 print(a)
+
+'''Solution:
+
+input_str = input()
+dimensions=[int(x) for x in input_str.split(',')]
+rowNum=dimensions[0]
+colNum=dimensions[1]
+multilist = [[0 for col in range(colNum)] for row in range(rowNum)]
+
+for row in range(rowNum):
+    for col in range(colNum):
+        multilist[row][col]= row*col
+
+print(multilist)'''
